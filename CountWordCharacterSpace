@@ -1,0 +1,31 @@
+//program to count Alphabets,number,special character and space
+import java.util.Scanner;
+public class CountWordsCharactersSpace1{
+public static void main(String args[]){
+//variable declaration
+    String str;
+int words=1,characters=1;
+//vriable declaration and initialization
+ Scanner scan=new Scanner(System.in); 
+    //create a scanner object for input
+    
+System.out.println("Enter the String  ");
+str=scan.nextLine();
+
+int i=0;
+while(i<str.length()-1){
+char ch=str.charAt(i);
+if(str.charAt(i)==' ' && str.charAt(i+1)!=' '){
+    words++;
+}
+
+else if(str.charAt(i)!=' '){
+    characters++;
+}
+ i++;
+}
+System.out.println("\nTotal words: "+words);
+System.out.println("Total characters: "+characters);
+System.out.println("Space: "+(words-1));
+}
+}
